@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Admission Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Student Admission Form</h1>
+        <form id="admission-form">
+            <!-- Student ID (Auto-generated) -->
+            <div class="form-group">
+                <label for="student-id">Student ID:</label>
+                <input type="text" id="student-id" name="student-id" readonly>
+                <small>(Auto-generated)</small>
+            </div>
+
+            <!-- Student's Name -->
+            <div class="form-group">
+                <label for="student-name">Student's Name:</label>
+                <input type="text" id="student-name" name="student-name" required>
+            </div>
+
+            <!-- Father's Name -->
+            <div class="form-group">
+                <label for="father-name">Father's Name:</label>
+                <input type="text" id="father-name" name="father-name" required>
+            </div>
+
+            <!-- Mother's Name -->
+            <div class="form-group">
+                <label for="mother-name">Mother's Name:</label>
+                <input type="text" id="mother-name" name="mother-name" required>
+            </div>
+
+            <!-- Birth Date -->
+            <div class="form-group">
+                <label for="birth-date">Birth Date:</label>
+                <input type="date" id="birth-date" name="birth-date" required>
+            </div>
+
+            <!-- Gender -->
+            <div class="form-group">
+                <label>Gender:</label>
+                <div class="gender-options">
+                    <label><input type="radio" name="gender" value="male" required> Male</label>
+                    <label><input type="radio" name="gender" value="female" required> Female</label>
+                </div>
+            </div>
+
+            <!-- Present Address -->
+            <div class="form-group">
+                <label>Present Address:</label>
+                <div class="address-group">
+                    <input type="text" id="present-division" name="present-division" placeholder="Division" required>
+                    <input type="text" id="present-district" name="present-district" placeholder="District" required>
+                    <textarea id="present-address" name="present-address" placeholder="Address" required></textarea>
+                </div>
+            </div>
+
+            <!-- Permanent Address -->
+            <div class="form-group">
+                <label>Permanent Address:</label>
+                <div class="address-group">
+                    <input type="text" id="permanent-division" name="permanent-division" placeholder="Division" required>
+                    <input type="text" id="permanent-district" name="permanent-district" placeholder="District" required>
+                    <textarea id="permanent-address" name="permanent-address" placeholder="Address" required></textarea>
+                </div>
+            </div>
+
+            <!-- Religion -->
+            <div class="form-group">
+                <label for="religion">Religion:</label>
+                <input type="text" id="religion" name="religion" required>
+            </div>
+
+            <!-- Nationality -->
+            <div class="form-group">
+                <label for="nationality">Nationality:</label>
+                <input type="text" id="nationality" name="nationality" required>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-group">
+                <label for="phone-number">Phone Number:</label>
+                <input type="tel" id="phone-number" name="phone-number" required>
+                <small id="phone-error" class="error-message"></small>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email (Optional):</label>
+                <input type="email" id="email" name="email">
+                <small id="email-error" class="error-message"></small>
+            </div>
+
+            <!-- Blood Group -->
+            <div class="form-group">
+                <label for="blood-group">Blood Group:</label>
+                <select id="blood-group" name="blood-group" required>
+                    <option value="">Select Blood Group</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+            </div>
+
+            <!-- Emergency Contact -->
+            <div class="form-group">
+                <label for="emergency-contact">Emergency Contact:</label>
+                <input type="text" id="emergency-contact" name="emergency-contact" placeholder="Name" required>
+                <input type="tel" id="emergency-phone" name="emergency-phone" placeholder="Phone Number" required>
+            </div>
+
+            <!-- Photo Upload -->
+            <div class="form-group">
+                <label for="photo">Upload Photo:</label>
+                <input type="file" id="photo" name="photo" accept="image/*">
+            </div>
+
+            <!-- Buttons -->
+            <div class="form-group button-group">
+                <button type="submit">Submit</button>
+                <button type="reset" id="reset-form">Reset</button>
+            </div>
+
+            <!-- Success Message -->
+            <div id="success-message" class="success-message"></div>
+        </form>
+
+        <!-- Report Section -->
+        <div id="report-section">
+            <h2>Student Report</h2>
+            <button id="generate-report">Generate Report</button>
+            <button id="export-data">Export Data as CSV</button>
+            <div id="report-results"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
