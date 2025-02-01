@@ -45,6 +45,7 @@ h1, h2 {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
 
 .form-group textarea {
@@ -114,6 +115,18 @@ button:hover {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 4px;
+}
+
+/* Styles for Dynamic Inputs (Other Religion/Nationality) */
+#other-religion,
+#other-nationality {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
 }
 
 /* Responsive Design */

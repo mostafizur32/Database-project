@@ -70,16 +70,50 @@
                 </div>
             </div>
 
+            <!-- Class -->
+            <div class="form-group">
+                <label for="class">Class:</label>
+                <select id="class" name="class" required>
+                    <option value="">Select Class</option>
+                    <option value="Nursery">Nursery</option>
+                    <option value="KG">KG</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <!-- Class Roll -->
+            <div class="form-group">
+                <label for="class-roll">Class Roll:</label>
+                <input type="number" id="class-roll" name="class-roll" min="1" max="50" required>
+            </div>
+
             <!-- Religion -->
             <div class="form-group">
                 <label for="religion">Religion:</label>
-                <input type="text" id="religion" name="religion" required>
+                <select id="religion" name="religion" required>
+                    <option value="">Select Religion</option>
+                    <option value="Islam">Islam</option>
+                    <option value="Sanatan">Sanatan</option>
+                    <option value="Christian">Christian</option>
+                    <option value="Buddhism">Buddhism</option>
+                    <option value="Others">Others</option>
+                </select>
+                <input type="text" id="other-religion" name="other-religion" placeholder="Specify Religion" style="display: none;">
             </div>
 
             <!-- Nationality -->
             <div class="form-group">
                 <label for="nationality">Nationality:</label>
-                <input type="text" id="nationality" name="nationality" required>
+                <select id="nationality" name="nationality" required>
+                    <option value="">Select Nationality</option>
+                    <option value="Bangladeshi">Bangladeshi</option>
+                    <option value="Others">Others</option>
+                </select>
+                <input type="text" id="other-nationality" name="other-nationality" placeholder="Specify Nationality" style="display: none;">
             </div>
 
             <!-- Phone Number -->
@@ -110,13 +144,6 @@
                     <option value="O+">O+</option>
                     <option value="O-">O-</option>
                 </select>
-            </div>
-
-            <!-- Emergency Contact -->
-            <div class="form-group">
-                <label for="emergency-contact">Emergency Contact:</label>
-                <input type="text" id="emergency-contact" name="emergency-contact" placeholder="Name" required>
-                <input type="tel" id="emergency-phone" name="emergency-phone" placeholder="Phone Number" required>
             </div>
 
             <!-- Photo Upload -->
